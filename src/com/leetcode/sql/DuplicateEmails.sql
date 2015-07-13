@@ -1,4 +1,8 @@
 /*
+ * 
+ * Duplicate Emails 
+ * https://leetcode.com/problems/duplicate-emails/
+ * 
 Write a SQL query to find all duplicate emails in a table named Person.
 
 +----+---------+
@@ -19,7 +23,7 @@ Note: All emails are in lowercase.
 
 */
 
---Data perparation
+######Data perparation######
 /*
 create table Person(
 id int,
@@ -35,7 +39,5 @@ insert into Person values (3, 'a@b.com');
 drop table Person;
 
 */
-
-
 
 select email from Person group by email having count(email)>1;
